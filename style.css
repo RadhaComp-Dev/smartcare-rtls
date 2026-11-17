@@ -1,0 +1,552 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263445;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #123b60;
+}
+
+.logo span {
+    color: #0786d1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263445;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #0786d1;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(120deg, #092b49, #087bc1);
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline {
+    color: #70d5ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #65d5ff;
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e3f1fa;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #08a5e8;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #057bbd;
+}
+
+
+/* About Section */
+
+.about {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.about h2,
+.solutions h2,
+.technology h2,
+.contact h2 {
+    font-size: 30px;
+    color: #123b60;
+    margin-bottom: 18px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #627386;
+}
+
+
+/* Solutions Section */
+
+.solutions {
+    background: #f1f7fc;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.section-description {
+    color: #627386;
+    margin-bottom: 35px;
+}
+
+.solution-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.solution-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.solution-card:hover {
+    transform: translateY(-7px);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.solution-card h3 {
+    color: #087bc1;
+    margin-bottom: 12px;
+}
+
+.solution-card p {
+    color: #627386;
+    font-size: 14px;
+}
+
+
+/* Technology Section */
+
+.technology {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.technology-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.technology-list span {
+    background: #e6f4fc;
+    color: #087bc1;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+/* Contact Section */
+
+.contact {
+    background: #eaf4fb;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 25px;
+    color: #627386;
+}
+
+
+/* Footer */
+
+footer {
+    background: #092b49;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 900px) {
+
+    .solution-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(90deg,
+            rgba(5, 35, 65, 0.95),
+            rgba(5, 80, 130, 0.65)
+        ),
+        url("images/hospital-tech.jpg") center/cover no-repeat;
+    }
+
+    /* Product Cards */
+    .solution-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Logo */
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-text span {
+        font-size: 20px;
+    }
+
+    .logo-text small {
+        font-size: 9px;
+    }
+
+    /* Mobile Navigation */
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* SmartCare Company Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #123b60;
+}
+
+.logo span:not(.logo-icon) {
+    color: #0786d1;
+}
+
+.logo-icon {
+    background: #0786d1;
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+}
+
+/* Contact Enquiry Form */
+
+.contact form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd9e5;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #0786d1;
+}
+
+.contact button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#formStatus {
+    color: #087a48;
+    font-weight: bold;
+}
+/* SmartCare RTLS Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #123b60;
+}
+
+.logo-icon {
+    background: #0786d1;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+}
+
+.logo-name {
+    color: #0786d1;
+}
+
+/* SmartCare RTLS Logo Design */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: #0786d1;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #123b60;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.logo-text span {
+    color: #0786d1;
+}
+
+.logo-text small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #64788a;
+    margin-top: 5px;
+}
+
+/* Product Images Styling */
+
+.product-card {
+    overflow: hidden;
+    padding: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #f5f8fb;
+}
+
+.product-card h3 {
+    color: #087fc1;
+    margin-bottom: 10px;
+}
+
+/* Suma Hospitals Logo Image */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Product Layout */
+
+@media (max-width: 768px) {
+    .solution-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 15px;
+    }
+
+    .solution-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Hamburger Menu - Desktop and Mobile */
+
+.menu-toggle {
+    display: none;
+    background: #087fc1;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Android Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        background: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+
+        transition: max-height 0.4s ease,
+                    opacity 0.3s ease,
+                    padding 0.4s ease;
+    }
+
+    .nav-links.active {
+        max-height: 350px;
+        opacity: 1;
+        padding: 20px 0;
+    }
+}
